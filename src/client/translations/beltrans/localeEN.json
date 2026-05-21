@@ -100,6 +100,9 @@
     "rowsPerPage": "Rows per page",
     "of": "of"
   },
+  "csvDownload": {
+    "manifestations": "Download CSV (UTF-8 encoding, delmiter ','). Licence: CC By 4.0. BELTRANS project (more info and link to full data in SODHA)"
+  },
   "lineChart": {
     "productionCount": "Production",
     "transferCount": "Transfer of custody",

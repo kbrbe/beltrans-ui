@@ -6,7 +6,8 @@
             "manifestations",
             "persons",
             "originals",
-            "organizations"
+            "organizations",
+            "fullTextSearch"
         ],
         "onlyInstancePages": [
         ]

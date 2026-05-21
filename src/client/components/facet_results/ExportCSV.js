@@ -4,6 +4,7 @@ import withStyles from '@mui/styles/withStyles';
 import Button from '@mui/material/Button'
 import Paper from '@mui/material/Paper'
 import { stateToUrl } from '../../helpers/helpers'
+import intl from 'react-intl-universal'
 
 const apiUrl = process.env.API_URL
 
@@ -72,12 +73,15 @@ class ExportCSV extends React.Component {
         <a
           className={classes.link}
           href={this.state.downloadLink}
-          download
+          download={this.props.facetClass}
         >
           <Button variant='contained' color='primary' className={classes.button}>
-            Export CSV
+            Export selection as CSV
           </Button>
         </a>
+        <div>
+          <p>{intl.get(`csvDownload.${this.props.facetClass}`)}</p>
+        </div>
       </Paper>
     )
   }

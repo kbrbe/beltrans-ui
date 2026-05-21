@@ -90,11 +90,12 @@
         },
         "export": {
             "tabID": 8,
-            "component": "Export",
             "tabPath": "export",
             "tabIcon": "CloudDownload",
-            "resultClass": "manifestations",
-            "facetClass": "manifestations"
+            "component": "ExportCSV",
+            "facetClass": "manifestations",
+            "sparqlQuery": "manifestationsCSVQuery",
+            "filterTarget": "id"
         },
         "knowledgeGraphMetadata": {
             "sparqlQuery": "knowledgeGraphMetadataQuery",

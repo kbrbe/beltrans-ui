@@ -324,6 +324,22 @@ export const sourceTargetMap = `
   ORDER BY desc(?instanceCount)
 `
     
+export const manifestationsCSVQuery = `
+
+  SELECT DISTINCT ?local_id ?title
+  WHERE {
+    <FILTER>
+    graph <http://beltrans-manifestations> { ?id a btm:BeltransGenreTranslation . }
+
+    OPTIONAL {
+      graph <http://beltrans-manifestations> { ?id schema:name ?title . }
+    }
+
+    OPTIONAL {
+      graph <http://beltrans-manifestations> { ?id dcterms:identifier ?local_id . }
+    }
+  }
+`
 
 export const knowledgeGraphMetadataQuery = `
   SELECT * 

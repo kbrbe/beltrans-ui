@@ -1,8 +1,8 @@
 {
     "id": "fullTextSearch",
     "endpoint": {
-        "url": "https://ldf.fi/mmm/sparql",
-        "useAuth": false,
+        "url": "http://beltrans2.kbr.be/sparql/namespace/integration/sparql?default-graph-uri=http://beltrans-manifestations&default-graph-uri=http://beltrans-contributors&default-graph-uri=http://master-data&default-graph-uri=http://beltrans-originals&named-graph-uri=http://beltrans-manifestations&named-graph-uri=http://beltrans-contributors",
+        "useAuth": true,
         "prefixesFile": "SparqlQueriesPrefixes.js"
     },
     "sparqlQueriesFile": "SparqlQueriesFullTextSearch.js",
@@ -19,25 +19,7 @@
             "sortValues": false,
             "numberedList": false,
             "minWidth": 400
-        },
-        {
-            "id": "type",
-            "valueType": "object",
-            "makeLink": false,
-            "externalLink": false,
-            "sortValues": false,
-            "numberedList": false,
-            "minWidth": 300
-        },
-        {
-            "id": "note",
-            "valueType": "string",
-            "makeLink": false,
-            "externalLink": false,
-            "sortValues": false,
-            "numberedList": false,
-            "minWidth": 400,
-            "collapsedMaxWords": 4
         }
+
     ]
 }
