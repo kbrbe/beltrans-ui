@@ -11,17 +11,21 @@ WORKDIR /usr/src/app
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
 COPY package*.json ./
+
+# install already here so it can be cached
+RUN npm install
+
 COPY webpack*.js ./
 
 # Babel 7 presets and plugins
 COPY babel.config.js ./
 
+
 # Bundle app source
 COPY src ./src
 
 # Run the scripts defined in package.json using build arguments
-RUN npm install && \ 
-API_URL=$API_URL MAPBOX_ACCESS_TOKEN=$MAPBOX_ACCESS_TOKEN npm run build
+RUN API_URL=$API_URL MAPBOX_ACCESS_TOKEN=$MAPBOX_ACCESS_TOKEN npm run build
 
 EXPOSE 3001
 
